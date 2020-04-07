@@ -1,37 +1,44 @@
-# this program uses charge, mass, and n# alternating magnetic fields into give V energy of a particle
+# this program uses charge, mass, and n# alternating magnetic fields intto give V energy of a particle
+import math
 
+print('\n')
+
+# might make mass equal to electron or proton equivelants
+# would then be tied to charge (q)
 print('Please enter particle type (electron = e and proton = p)') #or particle type? #e=1.6*10**-19
-m= input()
+m = input()
 
 qe = 1.602176634e-19
 me = 9.1093837015e-31
 mp = 9.1093837015e-31
 
-if m=='e':
-    q=qe
-    m=me
+if m =='e':
+    q = qe
+    m = me
     print('charge = −1.602176634x10^−19 C')
     print('mass = 9.1093837015x10^−31 Kg')
-elif m=='p': 
-    q=qe
-    m=mp
+elif m == 'p': 
+    q = qe
+    m = mp
     print('charge = +1.602176634x10^−19 C')
-    print('mass = 9.1093837015x10^−31 Kg')
-print()
-print()
+    print('mass = 9.1093837015x10^−31 Kg') 
+print('\n')
+
 print('Now, enter a voltage potential of your first field? (must be greater than 0)')
-Vo=input()
+Vo = input()
 
 #math module functions
-print()
-print()
+print('\n')
 
 acc_1 = 2*q*float(Vo)/m
-import math
+
 print("Your particle accelerated to (m/s): ", round(math.sqrt(acc_1),1))
 
 
-#garbage from here
+#def eq_1(n):
+    #math.sqrt(n*q*Vo/m)
+#eq_1()
+
 
 #print('Your particle accelerated to: ' + round(math.sqrt(acc_1),1)+ 'm/s')
 
@@ -55,12 +62,6 @@ print("Your particle accelerated to (m/s): ", round(math.sqrt(acc_1),1))
 #first acceleration
 
 
-
-#def eq_1():
-    #math.sqrt(2qVo/m)
-#eq_1()
-
-
 #print('Now, Enter the number of Electric Fields you want in your accelerator')
 #E_n= input()
 #print()
@@ -69,6 +70,5 @@ print("Your particle accelerated to (m/s): ", round(math.sqrt(acc_1),1))
 #print('How strong should the first Magnetic Field be?')
 #E_s= input()
 
-#
 
 
